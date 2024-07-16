@@ -5,6 +5,9 @@ on: [push]
 permissions: read-all
 
 jobs:
+  run-setup:
+    name: SetUp
+    uses: ./.github/workflows/setup.yml
   run-linter:
     name: Lint
     uses: ./.github/workflows/lint_yaml.yml
