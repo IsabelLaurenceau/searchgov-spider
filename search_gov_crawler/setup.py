@@ -1,4 +1,4 @@
-# Automatically created by: scrapyd-deploy
+""" Module automatically created by: scrapyd-deploy"""
 
 from setuptools import setup, find_packages
 from scrapyd_api import ScrapydAPI
