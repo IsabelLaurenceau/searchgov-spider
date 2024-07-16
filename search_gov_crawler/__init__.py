@@ -1,6 +1,5 @@
 """Module for running on EC2 instance."""
 
-import scrapy
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 from search_gov_crawler.search_gov_spiders.spiders.armymwr import ArmymwrSpider
