@@ -8,3 +8,6 @@ jobs:
   run-linter:
     name: Lint
     uses: ./.github/workflows/lint_yaml.yml
+  run-testing:
+    name: PyTest
+    uses: ./.github/workflows/pytest.yml
