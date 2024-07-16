@@ -1,6 +1,6 @@
 from unittest.case import TestCase
 
-from ..domain_spider import DomainSpider
+from ..spiders.domain_spider import DomainSpider
 from ..mocks.mock_response import return_response
 
 
