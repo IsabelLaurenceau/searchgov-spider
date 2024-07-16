@@ -23,7 +23,7 @@ jobs:
       uses: py-actions/flake8@v2.3.0
       with:
         ignore: E501,W605
-
-    # - name: Analysing the code with pylint
-    #   run: |
-    #     pylint $(git ls-files '*.py')
+    - name: Test with pytest
+      run: |
+        pip install pytest pytest-cov
+        pytest ./search_gov_crawler/search_gov_spiders/test/crawl_tests.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
