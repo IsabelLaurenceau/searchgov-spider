@@ -7,4 +7,4 @@ permissions: read-all
 jobs:
   run-linter:
     name: Lint
-    uses: ./.github/workflows/lint_yaml.yaml
+    uses: ./.github/workflows/lint_yaml.yml
