@@ -1,0 +1,10 @@
+name: Pipeline
+
+on: [push]
+
+permissions: read-all
+
+jobs:
+  run-linter:
+    name: Lint
+    uses: ./github/workflows/lint_yaml.yaml
