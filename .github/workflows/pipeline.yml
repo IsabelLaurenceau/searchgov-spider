@@ -9,6 +9,7 @@ jobs:
     name: SetUp
     uses: ./.github/workflows/setup.yml
   run-linter:
+    needs: run-setup
     name: Lint
     uses: ./.github/workflows/lint_yaml.yml
   run-testing:
