@@ -8,9 +8,9 @@ permissions:
   security-events: write
 
 jobs:
-  environment: dev
   security:
     runs-on: ubuntu-latest
+    environment: dev
     steps:
       - uses: actions/checkout@master
       - name: Run Snyk to check for vulnerabilities
