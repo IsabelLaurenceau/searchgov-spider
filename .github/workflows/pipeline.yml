@@ -34,6 +34,7 @@ jobs:
   #   name: Snyk
   #   uses: ./.github/workflows/snyk.yml
   security:
+    needs: run-setup
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
