@@ -1,8 +1,6 @@
 name: Pipeline
 
 on: [push]
-env:
-  SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
 permissions:
   security-events: write

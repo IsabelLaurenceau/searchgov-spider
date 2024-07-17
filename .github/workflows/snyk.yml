@@ -26,7 +26,7 @@ jobs:
     environment: dev
     steps:
       - uses: actions/checkout@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/python@master
-        with:
-          secrets: inherit
