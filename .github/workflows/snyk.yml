@@ -8,6 +8,7 @@ permissions:
   security-events: write
 
 jobs:
+  environment: dev
   security:
     runs-on: ubuntu-latest
     steps:
