@@ -5,9 +5,12 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: read
+  contents: read
+  statuses: read
   security-events: write
 
-jobs:
+  jobs:
   security:
     runs-on: ubuntu-latest
     environment: dev
