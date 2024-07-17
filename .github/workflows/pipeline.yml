@@ -33,4 +33,3 @@ jobs:
     needs: run-setup
     name: Snyk
     uses: ./.github/workflows/snyk.yml
-    secrets: inherit
