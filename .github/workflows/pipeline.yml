@@ -29,17 +29,20 @@ jobs:
   # run-testing:
   #   name: PyTest
   #   uses: ./.github/workflows/pytest.yml
-  # run-snyk:
-  #   needs: run-setup
-  #   name: Snyk
-  #   uses: ./.github/workflows/snyk.yml
-  security:
+  run-snyk:
     needs: run-setup
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: snyk/actions/setup@master
-      - name: Snyk monitor
-        run: snyk test
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+    name: Snyk
+    uses: ./.github/workflows/snyk.yml
+    with:
+      ENVIRONMENT: dev
+    secrets: inherit
+  # security:
+  #   needs: run-setup
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@master
+  #     - uses: snyk/actions/setup@master
+  #     - name: Snyk monitor
+  #       run: snyk test
+  #       env:
+  #         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
