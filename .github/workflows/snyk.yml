@@ -32,4 +32,4 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           command: auth
-          args: $SNYK_TOKEN
+          args: ${SNYK_TOKEN}
