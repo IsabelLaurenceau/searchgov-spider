@@ -16,6 +16,7 @@ permissions:
   pull-requests: read
   repository-projects: read
   statuses: read
+  id-token: none
 
 jobs:
   run-setup:
