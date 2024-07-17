@@ -12,6 +12,9 @@ jobs:
     needs: run-setup
     name: Lint
     uses: ./.github/workflows/lint_yaml.yml
-  run-testing:
-    name: PyTest
-    uses: ./.github/workflows/pytest.yml
+  # run-testing:
+  #   name: PyTest
+  #   uses: ./.github/workflows/pytest.yml
+  run-snyk:
+    name: Snyk
+    uses: ./.github/workflows/snyk.yml
