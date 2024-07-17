@@ -4,7 +4,11 @@ on:
   workflow_call:
   workflow_dispatch:
 
-permissions: read-all
+permissions:
+  actions: read
+  contents: read
+  statuses: read
+  security-events: write
 
 jobs:
   security:
