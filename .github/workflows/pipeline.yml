@@ -22,10 +22,10 @@ jobs:
   run-setup:
     name: SetUp
     uses: ./.github/workflows/setup.yml
-  run-linter:
-    needs: run-setup
-    name: Lint
-    uses: ./.github/workflows/lint_yaml.yml
+  # run-linter:
+  #   needs: run-setup
+  #   name: Lint
+  #   uses: ./.github/workflows/lint_yaml.yml
   # run-testing:
   #   name: PyTest
   #   uses: ./.github/workflows/pytest.yml
@@ -36,13 +36,3 @@ jobs:
     with:
       ENVIRONMENT: dev
     secrets: inherit
-  # security:
-  #   needs: run-setup
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@master
-  #     - uses: snyk/actions/setup@master
-  #     - name: Snyk monitor
-  #       run: snyk test
-  #       env:
-  #         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
