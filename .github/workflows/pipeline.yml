@@ -3,7 +3,20 @@ name: Pipeline
 on: [push]
 
 permissions:
-  read-all
+  security-events: write
+  actions: read
+  attestations: read
+  checks: read
+  contents: read
+  deployments: read
+  id-token: read
+  issues: read
+  discussions: read
+  packages: read
+  pages: read
+  pull-requests: read
+  repository-projects: read
+  statuses: read
 
 jobs:
   run-setup:
