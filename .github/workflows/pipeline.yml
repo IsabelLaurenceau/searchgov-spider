@@ -3,9 +3,7 @@ name: Pipeline
 on: [push]
 
 permissions:
-  actions: read
-  contents: read
-  statuses: read
+  read-all
   security-events: write
 
 jobs:
