@@ -4,7 +4,6 @@ on: [push]
 
 permissions:
   read-all
-  security-events: write
 
 jobs:
   run-setup:
