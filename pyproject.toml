@@ -75,3 +75,11 @@ run_all_domains = "search_gov_crawler:run_all_domains"
 
 [project.urls]
 Homepage = "https://github.com/GSA/searchgov-spider"
+
+[tool.poetry]
+name = "search_gov_crawler"
+version = "0.1.0"
+description = "A short description of the package."
+authors = [
+    "Search.gov <search@gsa.gov>",
+]
