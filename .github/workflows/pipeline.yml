@@ -2,7 +2,11 @@ name: Pipeline
 
 on: [push]
 
-permissions: read-all
+permissions:
+  actions: read
+  contents: read
+  statuses: read
+  security-events: write
 
 jobs:
   run-setup:
