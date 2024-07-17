@@ -49,3 +49,4 @@ uberegg==0.1.1
 urllib3==1.26.19
 w3lib==2.1.2
 zope.interface==6.1
+poetry

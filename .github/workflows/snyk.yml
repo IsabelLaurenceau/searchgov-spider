@@ -1,0 +1,49 @@
+name: Snyk
+
+on:
+  workflow_call:
+    inputs:
+      ENVIRONMENT:
+          required: true
+          type: string
+    secrets:
+      SNYK_TOKEN:
+        required: true
+  workflow_dispatch:
+
+permissions:
+  security-events: write
+  actions: read
+  attestations: read
+  checks: read
+  contents: read
+  deployments: read
+  issues: read
+  discussions: read
+  packages: read
+  pages: read
+  pull-requests: read
+  repository-projects: read
+  statuses: read
+  id-token: none
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    environment: ${{inputs.ENVIRONMENT}}
+    steps:
+      - uses: actions/checkout@master
+      - name: Auth Snyk to check for vulnerabilities
+        uses: snyk/actions/python@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: auth
+          args: "${SNYK_TOKEN}"
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/python@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: test
+          args: "${SNYK_TOKEN}"
