@@ -30,5 +30,6 @@ jobs:
   #   name: PyTest
   #   uses: ./.github/workflows/pytest.yml
   run-snyk:
+    needs: run-setup
     name: Snyk
     uses: ./.github/workflows/snyk.yml
